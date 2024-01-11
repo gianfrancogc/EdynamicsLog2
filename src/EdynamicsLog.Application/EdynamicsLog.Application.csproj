@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\Clients\**" />
+    <Compile Remove="Features\Companies\**" />
+    <Compile Remove="Features\Security\**" />
+    <Compile Remove="Features\Servicios\**" />
+    <Compile Remove="Features\Stores\**" />
+    <EmbeddedResource Remove="Features\Clients\**" />
+    <EmbeddedResource Remove="Features\Companies\**" />
+    <EmbeddedResource Remove="Features\Security\**" />
+    <EmbeddedResource Remove="Features\Servicios\**" />
+    <EmbeddedResource Remove="Features\Stores\**" />
+    <None Remove="Features\Clients\**" />
+    <None Remove="Features\Companies\**" />
+    <None Remove="Features\Security\**" />
+    <None Remove="Features\Servicios\**" />
+    <None Remove="Features\Stores\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="FluentValidation" Version="9.1.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.7" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EdynamicsLog.Domain\EdynamicsLog.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
